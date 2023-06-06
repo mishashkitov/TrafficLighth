@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,28 +13,28 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLighth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Jo1-0B-3hs">
-                                <rect key="frame" x="140.66666666666666" y="137" width="111.66666666666666" height="398"/>
+                                <rect key="frame" x="139.33333333333331" y="122" width="135.33333333333331" height="483"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIg-dQ-1tO">
-                                        <rect key="frame" x="0.0" y="0.0" width="111.66666666666667" height="112.66666666666667"/>
+                                        <rect key="frame" x="12.333333333333321" y="0.0" width="110.66666666666669" height="111.66666666666667"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="kIg-dQ-1tO" secondAttribute="height" multiplier="120:121" id="FnS-V2-oE7"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qor-uQ-gYv">
-                                        <rect key="frame" x="0.0" y="142.66666666666669" width="111.66666666666667" height="113"/>
+                                        <rect key="frame" x="12.999999999999993" y="141.66666666666669" width="109.33333333333331" height="110"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Qor-uQ-gYv" secondAttribute="height" multiplier="120:121" id="wzM-Cj-Vfv"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVu-WX-NF1">
-                                        <rect key="frame" x="0.66666666666668561" y="285.66666666666669" width="110.33333333333333" height="112.33333333333331"/>
+                                        <rect key="frame" x="12.66666666666665" y="281.66666666666669" width="110.33333333333331" height="201.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ZVu-WX-NF1" secondAttribute="height" multiplier="60:61" id="Ga5-vc-Ahf"/>
@@ -46,7 +46,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNn-Oz-s01">
-                                <rect key="frame" x="140.66666666666666" y="671" width="112" height="41"/>
+                                <rect key="frame" x="151" y="741" width="112" height="41"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="T9h-Be-pwm"/>
@@ -57,6 +57,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeLightButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="IAh-LG-r5w"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,6 +72,12 @@
                             <constraint firstItem="DNn-Oz-s01" firstAttribute="top" secondItem="Jo1-0B-3hs" secondAttribute="bottom" constant="136" id="tzQ-Va-Ce4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changeLightButton" destination="DNn-Oz-s01" id="uar-hq-Ecx"/>
+                        <outlet property="greenLight" destination="ZVu-WX-NF1" id="xOG-HD-Lu6"/>
+                        <outlet property="redLight" destination="kIg-dQ-1tO" id="krN-Sr-oPM"/>
+                        <outlet property="yellowLight" destination="Qor-uQ-gYv" id="9SW-uH-GfF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
